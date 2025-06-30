@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --fundo: #E1F5F2;
+    --cabecalho-rodapé: #6BC5D2 ;
+    --cor-titulos: #390050 ;
+    --cor-textos: #4B527E ;
+    --hover: #5A5D9D;
+    --fonte-titulos: "Krona One", sans-serif;
+    --fonte-textos: "Montserrat", sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--fundo);
+    padding-top: 70px;
+}
+
+.menu-principal{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--cabecalho-rodapé);
+    border-bottom: 1px solid #ccc;
+    z-index: 1000;
+}
+.menu-principal ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    font-family: var(--fonte-titulos);
+    color:#390050;
+
+}
+
+#nome{
+    margin-right: auto;
+    font-weight: bold;
+    font-size: 1.6em;
+    padding-left: 20px;
+}
+
+li a{
+    color: var(--fonte-titulos);
+    display: block;
+    text-align: center;
+    padding: 20px 16px;
+    text-decoration: none;
+    font-weight: normal;
+
+}
+
+li a:hover{
+    background-color: var(--hover);
+    color: var(--fonte-titulos);
+}
+
+.apresentacao{
+    padding: 5% 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 80px;
+}
+
+.apresentacao__conteudo { 
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+}
+
+.apresentacao img{
+    width: 30%;
+    border-radius: 16px;
+}
+
+.conteudo-centralizado{
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 5% 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.conteudo-centralizado .texto-principal,
+.conteudo-centralizado .texto-principal-sem-imagem{
+    text-align: justify;
+}
+
+.conteudo-centralizado .titulo-pagina,
+.conteudo-centralizado .titulo-pagina-sessoes{
+    text-align: center;
+}
+
+.link-redes{
+    display: inline-block;
+    padding: 15px 30px;
+    margin-top: 20px;
+    background-color: var(--cor-textos);
+    color: var(--fundo);
+    font-family: var(--fonte-titulos);
+    font-size: 1em;
+    text-align: center;
+    text-decoration: none;
+}
+
+.titulo-pagina{
+    font-size: 4em;
+    color:var(--cor-titulos);
+    font-family: var(--fonte-titulos);
+    padding: 0;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: baseline;
+    gap: 15px;
+    flex-wrap: wrap;
+    font-weight: bold;
+}
+
+.titulo-pagina-sessoes{
+    font-size: 2.5em;
+    color:var(--cor-titulos);
+    font-family: var(--fonte-titulos);
+    padding: 0;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: baseline;
+    gap: 15px;
+    flex-wrap: wrap;
+    font-weight: bold;
+}
+
+.destaque-titulo-formacao{
+    font-size: 0.8em;
+}
+
+.destaque-titulo{
+    color: var(--cor-textos);
+    font-weight: normal;
+}
+
+.texto-principal{
+    font-size: 1.5em;
+    font-family: var(--fonte-textos);
+    color: var(--cor-textos);
+    padding: 0;
+    text-align: justify;
+    margin-bottom: 24px;
+}
+
+.texto-principal-sem-imagem{
+    width: 100%;
+    font-size: 1.5em;
+    font-family: var(--fonte-textos);
+    color: var(--cor-textos);
+    text-align: justify;
+    margin-bottom: 24px;
+}
+
+.rodape{
+    background-color: var(--cabecalho-rodapé);
+    font-family: var(--fonte-titulos);
+    color: var(--cor-titulos);
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+
+
+
