@@ -1,3 +1,5 @@
+
+
 @import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root {
@@ -38,7 +40,6 @@ body{
     align-items: center;
     font-family: var(--fonte-titulos);
     color:#390050;
-
 }
 
 #nome{
@@ -55,7 +56,6 @@ li a{
     padding: 20px 16px;
     text-decoration: none;
     font-weight: normal;
-
 }
 
 li a:hover{
@@ -72,13 +72,13 @@ li a:hover{
 }
 
 .apresentacao__conteudo { 
-    width: 70%;
+    width: 72%;
     display: flex;
     flex-direction: column;
 }
 
 .apresentacao img{
-    width: 30%;
+    width: 28%;
     border-radius: 16px;
 }
 
@@ -105,16 +105,17 @@ li a:hover{
     display: inline-block;
     padding: 15px 30px;
     margin-top: 20px;
-    background-color: var(--cor-textos);
+    background-color: var(--cor-titulos);
     color: var(--fundo);
     font-family: var(--fonte-titulos);
     font-size: 1em;
     text-align: center;
     text-decoration: none;
+    border-radius: 8px;
 }
 
 .titulo-pagina{
-    font-size: 4em;
+    font-size: 2.9em;
     color:var(--cor-titulos);
     font-family: var(--fonte-titulos);
     padding: 0;
@@ -124,6 +125,36 @@ li a:hover{
     gap: 15px;
     flex-wrap: wrap;
     font-weight: bold;
+}
+
+.efeito-maquina-escrever {
+    white-space: nowrap;
+    overflow: hidden;
+    position: relative;
+    width: 0;
+    animation: typing 3.5s steps(var(--characters)) forwards;
+}
+
+.cursor-piscando::after {
+    content: "|";
+    margin-left: 5px;
+    animation: blink 1s infinite;
+}
+
+
+@keyframes typing {
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes blink {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
 }
 
 .titulo-pagina-sessoes{
@@ -177,6 +208,118 @@ li a:hover{
     font-weight: bold;
 }
 
+#container-formulario{
+    background-color:var(--cabecalho-rodapé);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0,0.2);
+    padding: 40px;
+    font-family: var(--fonte-textos);
+    font-weight: bold;
+    color: var(--cor-titulos);
+    width: 100%;
+    max-width: 600px;
+}
+
+.input-group{
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.input-group input,
+.input-group textarea{
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--fundo);
+    font-family: var(--fonte-textos);
+    font-size: 1em;
+    color: var(--cor-textos);
+}
+
+.buttons{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.buttons button{
+    width: 100%;
+    padding: 15px;
+    background-color: var(--cor-titulos);
+    color: var(--fundo);
+    font-family: var(--fonte-titulos);
+    font-size: 1.2em;
+    border: none;
+    border-radius: 8px;
+}
+
+.buttons button:hover{
+    background-color: var(--hover);
+}
+
+@media (max-width: 1024px) {
+
+    .apresentacao {
+        flex-direction: column-reverse;
+        padding: 8% 5%;
+        gap: 50px;
+    }
+
+    .apresentacao__conteudo {
+        width: auto;
+    }
+
+    .titulo-pagina {
+        font-size: 2.5em;
+        text-align: center;
+        justify-content: center;
+    }
+
+    #nome {
+        font-size: 1.4em;
+    }
+}
 
 
+@media (max-width: 768px) {
 
+    body {
+        padding-top: 280px; 
+    }
+
+    .menu-principal ul {
+        flex-direction: column;
+        align-items: center;
+        padding: 5px 0;
+    }
+
+    #nome {
+        margin-right: 0;
+        font-size: 1.5em; 
+        padding: 15px 0;
+    }
+
+    li a {
+        padding: 15px 16px;
+    }
+
+    .titulo-pagina {
+        font-size: 1.8em;
+    }
+
+    .texto-principal,
+    .texto-principal-sem-imagem {
+        font-size: 1.2em;
+    }
+
+    .apresentacao {
+        padding: 30% 5%;
+    }
+
+    .apresentacao img {
+        width: 40%;
+    }
+}
