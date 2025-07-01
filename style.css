@@ -1,6 +1,7 @@
-
-
+/*Para este projeto foram importadas duas fontes via Google Fonts: */
 @import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+/*Declaração das variáveis de cores e fontes utilizadas no projeto, para garantir a boa manutenção do código.*/
 
 :root {
     --fundo: #E1F5F2;
@@ -12,6 +13,7 @@
     --fonte-textos: "Montserrat", sans-serif;
 }
 
+/* Resetando as configurações iniciais: */
 * {
     margin: 0;
     padding: 0;
@@ -23,15 +25,16 @@ body{
     padding-top: 70px;
 }
 
+/* Configurações do menu superior */
 .menu-principal{
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     background-color: var(--cabecalho-rodapé);
-    border-bottom: 1px solid #ccc;
     z-index: 1000;
 }
+
 .menu-principal ul {
     list-style-type: none;
     margin: 0;
@@ -63,6 +66,8 @@ li a:hover{
     color: var(--fonte-titulos);
 }
 
+/* Organização dos demais elementos, texto e foto */
+
 .apresentacao{
     padding: 5% 10%;
     display: flex;
@@ -82,6 +87,7 @@ li a:hover{
     border-radius: 16px;
 }
 
+/* Organização de elementos em páginas sem foto*/
 .conteudo-centralizado{
     max-width: 900px;
     margin: 0 auto;
@@ -127,6 +133,12 @@ li a:hover{
     font-weight: bold;
 }
 
+.destaque-titulo{
+    color: var(--cor-textos);
+    font-weight: normal;
+}
+
+/*Estilos serão manipulados pelo Javascript na página inicial*/
 .efeito-maquina-escrever {
     white-space: nowrap;
     overflow: hidden;
@@ -140,7 +152,6 @@ li a:hover{
     margin-left: 5px;
     animation: blink 1s infinite;
 }
-
 
 @keyframes typing {
     to {
@@ -174,11 +185,6 @@ li a:hover{
     font-size: 0.8em;
 }
 
-.destaque-titulo{
-    color: var(--cor-textos);
-    font-weight: normal;
-}
-
 .texto-principal{
     font-size: 1.5em;
     font-family: var(--fonte-textos);
@@ -197,6 +203,7 @@ li a:hover{
     margin-bottom: 24px;
 }
 
+/*estilos do rodapé da página*/
 .rodape{
     background-color: var(--cabecalho-rodapé);
     font-family: var(--fonte-titulos);
@@ -208,6 +215,7 @@ li a:hover{
     font-weight: bold;
 }
 
+/*formatação do formulário de contato*/
 #container-formulario{
     background-color:var(--cabecalho-rodapé);
     border-radius: 8px;
@@ -259,7 +267,9 @@ li a:hover{
 .buttons button:hover{
     background-color: var(--hover);
 }
+/*Responsividade*/
 
+/*Configurações para visualização em telas até 1024px, tablets, celulares maiores: */
 @media (max-width: 1024px) {
 
     .apresentacao {
@@ -283,6 +293,7 @@ li a:hover{
     }
 }
 
+/*Configurações para visualização em telas até 1024px, exemplo, smartphones: */
 
 @media (max-width: 768px) {
 
