@@ -313,6 +313,8 @@ li a:hover{
     .texto-principal,
     .texto-principal-sem-imagem {
         font-size: 1.2em;
+        padding: 20px;
+        margin: 20px;
     }
 
     .apresentacao {
